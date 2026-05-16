@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>文字で背景色変更</title>
+<style>
+    body {
+        transition: background-color 0.5s;
+        font-family: sans-serif;
+        padding: 30px;
+    }
+
+    textarea {
+        width: 300px;
+        height: 100px;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1>貼り付けた文字で背景色を変更</h1>
+
+<textarea id="inputText" placeholder="ここに文字を貼り付け"></textarea><br>
+<button onclick="changeColor()">色を変更</button>
+
+<script>
+function changeColor() {
+    const text = document.getElementById("inputText").value;
+
+    // 特定の文字に応じて色を変更
+    if (text.includes("赤")) {
+let b;
+b="red";
+        document.body.style.backgroundColor = b;
+    }
+    else if (text.includes("青")) {
+let a;
+a="blue";
+        document.body.style.backgroundColor = a;
+    }
+    else if (text.includes("緑")) {
+        document.body.style.backgroundColor = "green";
+    }
+    else if (text.includes("黄色")) {
+        document.body.style.backgroundColor = "yellow";
+    }
+    else {
+        document.body.style.backgroundColor = "white";
+    }
+}
+</script>
+
+</body>
+</html>
